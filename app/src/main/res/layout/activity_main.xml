@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/rounded_header"
+    android:fillViewport="true"
+    android:paddingLeft="4px"
+    android:paddingRight="4px"
+    tools:context=".Activities.MainActivity">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/linearLayout2"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <include
+            android:id="@+id/header"
+            layout="@layout/header"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            app:layout_constraintBottom_toTopOf="parent"
+            app:layout_constraintEnd_toStartOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/tvMainHeader"
+            android:layout_width="wrap_content"
+            android:layout_height="378dp"
+            android:layout_marginTop="32dp"
+            android:fontFamily="sans-serif-condensed-medium"
+            android:gravity="center"
+            android:rotation="-22"
+            android:rotationX="9"
+            android:rotationY="3"
+            android:shadowColor="@color/black"
+            android:shadowDx="10"
+            android:shadowDy="10"
+            android:shadowRadius="2"
+            android:text="VACATION TRACKER"
+            android:textColor="@color/lime"
+            android:textSize="60sp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toTopOf="@+id/btnMainButton"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.0" />
+
+        <TextView
+            android:id="@+id/tvMainMessage"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="24dp"
+            android:fontFamily="sans-serif"
+            android:gravity="center"
+            android:text="Powered By Android"
+            android:textColor="@color/black"
+            android:textSize="20sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toStartOf="parent" />
+
+        <Button
+            android:id="@+id/btnMainButton"
+            android:layout_width="350dp"
+            android:layout_height="80dp"
+            android:layout_marginBottom="16dp"
+            android:backgroundTint="@color/black"
+            android:drawableTint="@color/lime"
+            android:fontFamily="sans-serif"
+            android:gravity="center"
+            android:paddingLeft="25dp"
+            android:text="Get Started"
+            android:textColor="@color/lime"
+            android:textSize="32sp"
+            app:layout_constraintBottom_toTopOf="@+id/tvMainMessage"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toStartOf="parent"
+            app:rippleColor="@color/lime" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</ScrollView>

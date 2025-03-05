@@ -1,0 +1,209 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#999999"
+    tools:context=".Activities.VacationDetails">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <include
+            android:id="@+id/header"
+            layout="@layout/header"
+            android:layout_width="match_parent"
+            android:layout_height="100dp"
+            tools:text="Vacation Details and Excursion List" />
+
+        <TextView
+            android:id="@+id/tvVacationHeader"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="24dp"
+            android:backgroundTint="#999999"
+            android:gravity="center"
+            android:text="Enter Your Vacation Details "
+            android:textColor="@color/black"
+            android:textSize="15sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/header" />
+
+        <EditText
+            android:id="@+id/etVacationName"
+            android:layout_width="255dp"
+            android:layout_height="48dp"
+            android:layout_marginTop="4dp"
+            android:background="@drawable/text_box"
+            android:ems="10"
+            android:hint="Vacation Name"
+            android:inputType="text"
+            android:paddingLeft="20px"
+            android:textColor="@color/black"
+            android:textColorHint="#66000000"
+            android:textSize="15sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.503"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tvVacationHeader" />
+
+        <EditText
+            android:id="@+id/etVacationHotel"
+            android:layout_width="255dp"
+            android:layout_height="48dp"
+            android:layout_marginTop="8dp"
+            android:background="@drawable/text_box"
+            android:ems="10"
+            android:hint="Where will you stay?"
+            android:inputType="text"
+            android:paddingLeft="20px"
+            android:textColor="@color/black"
+            android:textColorHint="#66000000"
+            android:textSize="15sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/etVacationName" />
+
+        <TextView
+            android:id="@+id/tvVacationDates"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:backgroundTint="#999999"
+            android:gravity="center"
+            android:text="Vacation Start and End Date"
+            android:textColor="@color/black"
+            android:textSize="15sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.497"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/etVacationHotel" />
+
+        <EditText
+            android:id="@+id/etVacationStart"
+            android:layout_width="120dp"
+            android:layout_height="48dp"
+            android:layout_marginTop="8dp"
+            android:background="@drawable/text_box"
+            android:ems="10"
+            android:gravity="center"
+            android:hint="Start Date"
+            android:inputType="date"
+            android:textAlignment="center"
+            android:textColor="@color/black"
+            android:textColorHighlight="@color/lime"
+            android:textColorHint="#66000000"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="@+id/etVacationHotel"
+            app:layout_constraintTop_toBottomOf="@+id/tvVacationDates" />
+
+        <EditText
+            android:id="@+id/etVacationEnd"
+            android:layout_width="120dp"
+            android:layout_height="48dp"
+            android:layout_marginTop="4dp"
+            android:background="@drawable/text_box"
+            android:ems="10"
+            android:gravity="center"
+            android:hint="End Date"
+            android:inputType="date"
+            android:textAlignment="center"
+            android:textColor="@color/black"
+            android:textColorHighlight="@color/lime"
+            android:textColorHint="#66000000"
+            app:layout_constraintBottom_toTopOf="@+id/btnGoBacktoVacationList"
+            app:layout_constraintEnd_toEndOf="@+id/etVacationHotel"
+            app:layout_constraintHorizontal_bias="1.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tvVacationDates"
+            app:layout_constraintVertical_bias="0.555" />
+
+        <Button
+            android:id="@+id/btnVacationSumbit"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="4dp"
+            android:backgroundTint="@color/black"
+            android:shadowColor="@color/lime"
+            android:text="Submit Vacation"
+            android:textColor="@color/lime"
+            android:textColorHighlight="@color/lime"
+            android:textColorHint="@color/lime"
+            android:textColorLink="@color/lime"
+            app:layout_constraintEnd_toStartOf="@+id/btnGoBacktoVacationList"
+            app:layout_constraintHorizontal_bias="0.911"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/etVacationStart"
+            app:rippleColor="@color/lime"
+            app:strokeColor="@color/lime" />
+
+        <Button
+            android:id="@+id/btnGoBacktoVacationList"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:backgroundTint="@color/black"
+            android:text="Back"
+            android:textColor="@color/white"
+            android:textSize="15sp"
+            app:layout_constraintBottom_toBottomOf="@+id/btnVacationSumbit"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.703"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/btnVacationSumbit"
+            app:layout_constraintVertical_bias="0.0"
+            app:rippleColor="@color/lime" />
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/recyclerViewExcursions"
+            android:layout_width="0dp"
+            android:layout_height="360dp"
+            android:padding="16dp"
+            app:layout_constraintBottom_toTopOf="@+id/fabAddNewExcursion"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="1.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/btnVacationSumbit" />
+
+        <com.google.android.material.floatingactionbutton.FloatingActionButton
+            android:id="@+id/fabAddNewExcursion"
+            android:layout_width="65dp"
+            android:layout_height="65dp"
+            android:layout_marginEnd="24dp"
+            android:clickable="true"
+            android:contentDescription="Add a New Excursion"
+            app:backgroundTint="@color/black"
+            app:ensureMinTouchTargetSize="true"
+            app:fabCustomSize="65dp"
+            app:fabSize="auto"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="1.0"
+            app:layout_constraintStart_toEndOf="@+id/tvAddNewExcursion"
+            app:maxImageSize="80dp"
+            app:rippleColor="@color/lime"
+            app:srcCompat="@drawable/outline_add_24"
+            app:tint="@color/lime" />
+
+        <TextView
+            android:id="@+id/tvAddNewExcursion"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="16dp"
+            android:text="Add a New Excursion ➡️"
+            android:textAlignment="center"
+            android:textColor="@color/black"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.656"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/recyclerViewExcursions"
+            app:layout_constraintVertical_bias="0.636" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</ScrollView>
